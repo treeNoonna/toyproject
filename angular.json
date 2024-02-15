@@ -55,6 +55,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "coconut:build:production",
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "coconut:build:production"
@@ -87,7 +91,9 @@
               "src/styles.css",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           }
         }
       }

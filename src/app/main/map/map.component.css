@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "custom";
+  src: url("../../../assets/font3.ttf") format("truetype");
+}
+
+
+.form {
+  width: 300px;
+  font-family: 'custom';
+}
+
+.container{
+  display: flex;
+}
+
+.map-content{
+  width:50%;
+  height:800px;
+  margin-left: 10%;
+  flex:1;
+}
+
+.map-list {
+  flex: 0.5;
+  margin-top: 2%;
+}

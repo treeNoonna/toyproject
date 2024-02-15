@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "custom";
+  src: url("../../assets/font3.ttf") format("truetype");
+}
+
+.main-container {
+  display: flex;
+  font-family: custom;
+}
+
+.left-item {
+  flex : 1.3;
+}
+
+.right-item {
+  background-color: #000000;
+  flex : 1;
+}
+
+.logo {
+  margin-top: 35%;
+  margin-left: 10%;
+  display: inline-flex;
+}
+
+.name {
+  font-size: 150px;
+  font-weight:900;
+  color:rgb(250, 141, 117);
+  position: relative;
+}
+
+[nz-button] {
+  margin-left: 5%;
+  height: 80px;
+  top: -35px;
+  font-size: 30px;
+  color:hsl(194, 94%, 69%);
+  border-color :hsl(194, 94%, 69%);
+  outline: hsl(194, 94%, 69%);
+}
+
+.ant-btn.ant-btn-background-ghost:hover {
+  color: hwb(13 54% 2%);
+  border-color: hwb(13 54% 2%);
+}
+
+.main-coconut {
+  width: 100%
+}
+
+
+.coco-tree {
+  width : 30%;
+}

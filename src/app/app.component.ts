@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 declare var kakao: any;
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
   map: any;
 
+  router = inject(Router);
+
   ngOnInit(): void {
-    setTimeout(() => {
+  }
+   /*  setTimeout(() => {
       const options = {
         center: new kakao.maps.LatLng(36.370546, 127.345966),
         level: 3
@@ -35,5 +40,6 @@ let callback = function(status :any , result :any, pagination :any) {
   places.categorySearch('FD6', callback, {
 	  location: new kakao.maps.LatLng(33.450701, 126.570667)
   });
-  }
+  } */
+
 }

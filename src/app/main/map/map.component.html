@@ -1,0 +1,14 @@
+
+ <!--  <form nz-form [formGroup]="userRegion" class="form">
+  <nz-form-item>
+    <nz-form-label>유저 지역은?</nz-form-label>
+    <nz-form-control>
+      <input nz-input formControlName="searchText">
+    </nz-form-control>
+</nz-form-item>
+</form>
+<button nz-button nzType="text" (click)="submit($event)">확인</button> -->
+<div class="container">
+  <div #map class="map-content"></div>
+  <app-diner-list [response]="response" class="map-list"></app-diner-list>
+</div>

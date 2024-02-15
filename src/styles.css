@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
+
+
+@font-face {
+  font-family: "custom";
+  src: url("assets/font3.ttf") format("truetype");
+}
+
+
+body {
+  font-family: 'custom';
+  margin :0;
+}
+
