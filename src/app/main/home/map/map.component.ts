@@ -1,12 +1,12 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NgFor } from '@angular/common';
-import { DinerListComponent } from './diner-list/diner-list.component';
+import { DinerListComponent } from '../sider/diner-list/diner-list.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 declare var kakao: any;
@@ -23,10 +23,12 @@ declare var kakao: any;
 export class MapComponent implements AfterViewInit, OnInit{
 
   @ViewChild('map') mapEl! : ElementRef;
+  @Output() responseEmitter = new EventEmitter();
 
   userRegion! : FormGroup;
   http = inject(HttpClient);
-  response! : any;
+
+
 
   ngOnInit(): void {
     this.userRegion = new FormGroup({
@@ -93,7 +95,8 @@ function placesSearchCB (data:any, status:any, pagination:any) {
 } */
 
 this.getRequest().subscribe((res)=> {
-  this.response = res.documents;
+
+  this.responseEmitter.emit(res.documents);
   console.log('request response :', res.documents);
   var bounds = new kakao.maps.LatLngBounds();
 

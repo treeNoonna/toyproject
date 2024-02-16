@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { MapComponent } from './map/map.component';
-import { HeaderComponent } from './header/header.component';
+import { MapComponent } from './home/map/map.component';
+import { HeaderComponent } from './home/header/header.component';
 import { CommonModule } from '@angular/common';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';

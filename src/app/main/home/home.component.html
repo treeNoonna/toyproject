@@ -3,9 +3,18 @@
  -->
 
 <nz-layout>
-  <nz-header><app-header></app-header></nz-header>
+  <nz-header>
+    <app-header></app-header>
+  </nz-header>
     <div class="main-content">
-      <nz-content><app-map></app-map></nz-content>
+      <nz-content>
+        <app-map
+          (responseEmitter)="setResponse($event)">
+        </app-map>
+      </nz-content>
+      <nz-sider>
+        <app-diner-list [response]="list" class="map-list"></app-diner-list>
+      </nz-sider>
     </div>
   <!-- <nz-footer>Coconut map <img [src]="'assets/coconut_logo.webp'" class="footer"></nz-footer> -->
 </nz-layout>

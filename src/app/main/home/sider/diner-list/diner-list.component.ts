@@ -12,7 +12,5 @@ export class DinerListComponent {
 
   items! : any;
 
-  @Input() set response(params:any) {
-    this.items = params
-  }
+  @Input() response: any[] = [];
 }
