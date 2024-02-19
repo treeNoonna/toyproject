@@ -1,3 +1,5 @@
+import { 음식점리뷰 } from "./reviews.model";
+
 export interface 음식점 {
   address_name: string;
   category_group_code: string;
@@ -11,4 +13,5 @@ export interface 음식점 {
   road_address_name: string;
   x: string;
   y: string;
+  reviewList: 음식점리뷰[];
 }
